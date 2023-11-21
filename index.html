@@ -25,15 +25,40 @@
     <img src="assets/freddie.png" alt="Picture-of-freddie" />
     <h1>We are the Champions</h1>
     <textarea
+      class="inputs"
       placeholder="Write your endorsement here"
       name="yourendorsement"
       id="yourendorsement"
       cols="30"
       rows="10"
     ></textarea>
-    <button type="submit">Publish</button>
+    <div id="fromto">
+      <textarea
+        class="inputs"
+        name="from"
+        id="from"
+        placeholder="From:"
+      ></textarea>
+      <textarea class="inputs" name="to" id="to" placeholder="To:"></textarea>
+    </div>
+    <button id="submits" type="submit">Publish</button>
     <h2>- Endorsements -</h2>
-    <ul id="chat"></ul>
+    <ul id="chat">
+      <!--Dette er et eksempel på en chat som er publisert-->
+      <li class="classli">
+        <ul class="classlu">
+          <li class="tofromli nameli">To: Tord</li>
+        </ul>
+        test
+        <ul class="classlu">
+          <li class="tofromli nameli">From: Vincent</li>
+          <li class="tofromli reaksjonli">
+            <button class="likes">♥ 1</button>
+          </li>
+        </ul>
+      </li>
+      <!--Dette er et eksempel på en chat som er publisert-->
+    </ul>
     <script src="index.js" type="module"></script>
   </body>
 </html>

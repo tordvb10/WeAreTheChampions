@@ -25,6 +25,7 @@ submitted.addEventListener("click", function () {
   const messageToSubmit = inputFieldEl.value;
   let nyli = document.createElement("li");
   nyli.innerText = messageToSubmit;
+  nyli.classList.add("classli");
   uls.appendChild(nyli);
   inputFieldEl.value = "";
 });

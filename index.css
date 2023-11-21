@@ -55,12 +55,12 @@ h2 {
   margin-bottom: 3px;
 }
 
-ul {
+#chat {
   padding: 0;
   display: flex;
   flex-direction: column-reverse;
 }
-li {
+.classli {
   list-style-type: none;
   padding: 16px;
   width: 317px;
@@ -75,7 +75,56 @@ li {
   margin-bottom: 13px;
 }
 
-textarea {
+.classlu {
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.tofromli {
+  list-style-type: none;
+  height: fit-content;
+  width: fit-content;
+  justify-content: space-evenly;
+}
+
+.likes {
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+
+.likes:hover {
+  color: red;
+  text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+}
+
+.likes:active {
+  color: rgb(141, 4, 4);
+  text-shadow: none;
+}
+
+.tofromli {
+  font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0em;
+  text-align: left;
+}
+.nameli {
+  font-size: 14px;
+  line-height: 16.94px;
+  color: #1b1924;
+}
+
+.reaksjonli {
+  font-size: 16px;
+  line-height: 19.36px;
+  color: #000000;
+}
+
+.inputs {
   background-color: #444059;
   width: 317px;
   height: 118px;
@@ -88,12 +137,39 @@ textarea {
   letter-spacing: 0em;
   text-align: left;
   resize: none;
+  border: none;
+}
+
+#fromto {
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 13px;
+  width: 317px;
+}
+
+#fromto > textarea {
+  position: flex;
+  text-align: center;
+  align-items: center;
+  height: auto;
+  width: 152.85px;
+  height: 40px;
+  padding: 10px;
+}
+#fromto > textarea::placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
 }
 ::placeholder {
   color: #8f8f8f;
 }
 
-button {
+#submits {
   background-color: #28a9f1;
   color: #04131c;
   font-size: 22px;
