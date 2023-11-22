@@ -65,14 +65,15 @@ h2 {
   padding: 16px;
   width: 317px;
   height: fit-content;
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 400;
-  line-height: 15px;
+  line-height: 17px;
   letter-spacing: 0em;
   text-align: left;
   color: #1b1924;
   background-color: #ffffff;
   margin-bottom: 13px;
+  font-family: Inter, Verdana, Geneva, Tahoma, sans-serif;
 }
 
 .classlu {
@@ -88,6 +89,17 @@ h2 {
   height: fit-content;
   width: fit-content;
   justify-content: space-evenly;
+}
+
+.lito {
+  padding-bottom: 6px;
+}
+
+.lifrom {
+  padding-top: 9.8px;
+}
+.lifrom > .nameli {
+  padding-top: 1px;
 }
 
 .likes {
