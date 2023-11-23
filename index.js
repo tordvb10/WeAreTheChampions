@@ -82,13 +82,26 @@ function displayendorsement(chatboble) {
   topersonul.classList.add("classlu", "lito");
 
   let likebutton = document.createElement("button");
-  console.log(chatboble.likebuttonInnerText);
 
-  if (chatboble.likebuttonInnerText.length - 1) {
-    likebutton.innerText = "♥ " + chatboble.likebuttonInnerText.length - 1;
-  } else {
-    likebutton.innerText = "♥ 0";
-  }
+  likebutton.addEventListener("click", function () {
+    if (chatboble.likebuttonInnerText.includes(chatboble.frompersonname)) {
+      console.log(chatboble.likebuttonInnerText);
+      console.log(typeof chatboble.frompersonname);
+      chatboble.likebuttonInnerText = chatboble.likebuttonInnerText.filter(
+        (e) => e !== chatboble.frompersonname
+      );
+    } else {
+      chatboble.likebuttonInnerText.push(chatboble.frompersonname);
+    }
+    likebutton.innerText = `♥ ${chatboble.likebuttonInnerText.length - 1}`;
+    console.log("likebutton clicked");
+    console.log(chatboble.likebuttonInnerText.length - 1);
+    console.log(chatboble.likebuttonInnerText);
+  });
+
+  console.log(chatboble.likebuttonInnerText);
+  likebutton.innerText = `♥ ${chatboble.likebuttonInnerText.length - 1}`;
+
   likebutton.classList.add("likes");
 
   let likebuttonli = document.createElement("li");
@@ -137,7 +150,7 @@ onValue(chatListInDB, function (snapshot) {
       if (
         chatboblevalue.frompersonname === to.value ||
         chatboblevalue.frompersonname === from.value ||
-        chatboblevalue.topersonname === "Everyone"
+        chatboblevalue.topersonname === ""
       ) {
         console.log(chatboblevalue.frompersonname);
         displayendorsement(chatboblevalue);
@@ -147,7 +160,7 @@ onValue(chatListInDB, function (snapshot) {
     uls.innerHTML = "No chats yet.";
   }
 });
-
+console.log(chatListInDB);
 function slettchat() {
   console.log("slett");
 }
